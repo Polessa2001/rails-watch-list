@@ -7,7 +7,7 @@
         <a href = '#' data-action="click->list#display">Watch list</a>
     </div>
   </div>
-  <div class="lists-active" data-list-target="navigation">
+  <div class="hidden lists-active" data-list-target="navigation">
     <% @lists.each do |list| %>
         <%= link_to  list_path(list), class: "link-name" do %>
           <div class="list-item">

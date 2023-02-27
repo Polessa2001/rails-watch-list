@@ -7,7 +7,8 @@ export default class extends Controller {
     console.log("movies controller connected")
   }
 
-  display() {
-    this.navigationTarget.classList.toggle("d-none")
+  display(event) {
+    event.preventDefault()
+    this.navigationTarget.classList.toggle("hidden")
   }
 }
