@@ -1,13 +1,2 @@
-<div class = 'list-page'>
-  <div class = 'list-page-main'>
-    <div class = "new-list"><%= render "form", list: @list %></div>
-    <div class = 'right'>
-      <div class = "square square-1"></div>
-      <div class = "square square-2"> <%= link_to 'Back to the lists', lists_path %></div>
-      <div class = "square square-3"></div>
-    </div>
-  </div>
-  <div class = 'list-page-bottom'>
-    <p>CREATING A NEW LIST . . .</p>
-  </div>
-</div>
+<%= render "form", list: @list %>
+<%= link_to 'Back to the lists', lists_path %>

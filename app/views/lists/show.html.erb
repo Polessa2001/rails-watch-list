@@ -1,20 +1,10 @@
-<div class = 'list-page'>
-  <div class = 'list-page-main'>
-    <div class="each-list">
-      <% @list.bookmarks.each do |bookmark| %>
-        <div class="each-list-item">
-          <h3><%= @bookmark.comment %></h3>
-          <h2><%= bookmark.movie.title %></h2>
-          <p><%= bookmark.movie.overview %></p>
-        </div>
-      <% end %>
-    </div>
-    <div class = 'right'>
-      <div class = "square square-1"><%= link_to 'Add a movie', new_list_bookmark_path(@list) %></div>
-      <div class = "square square-2"> <%= link_to 'Back to the lists', lists_path %></div>
-    </div>
+<% @list.bookmarks.each do |bookmark| %>
+  <div>
+    <h3><%= @bookmark.comment %></h3>
+    <h2><%= bookmark.movie.title %></h2>
+    <p><%= bookmark.movie.overview %></p>
   </div>
-  <div class = 'list-page-bottom'>
-    <p><%= @list.name.upcase %></p>
-  </div>
-</div>
+<% end %>
+<%= link_to 'Add a movie', new_list_bookmark_path(@list) %>
+<%= link_to 'Back to the lists', lists_path %>
+<p><%= @list.name.upcase %></p>

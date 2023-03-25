@@ -1,0 +1,35 @@
+.myfooter {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  width: 80%;
+  border-top: 1px solid #A6A6A6;
+  margin:0 183px;
+  padding: 52px 0;
+  justify-content: space-between;
+  align-items: center;
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin:auto 0;
+  }
+  li {
+    float: left;
+    padding:0 14px;
+    a {
+      display: block;
+      border-radius: 50%;
+      background: none;
+      margin: auto;
+      border: 1px solid #A6A6A6;
+    }
+    a:hover {
+      background: none;
+      border: 1px solid #A6A6A6;
+    }
+    i {
+      width:20px;
+      height: 20px;
+    }
+  }
+}

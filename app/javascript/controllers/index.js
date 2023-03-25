@@ -10,6 +10,3 @@ application.register("hello", HelloController)
 
 import FormController from "./form_controller"
 application.register("form", FormController)
-
-import ListController from "./list_controller"
-application.register("list", ListController)
