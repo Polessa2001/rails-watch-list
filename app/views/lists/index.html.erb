@@ -1,8 +1,16 @@
-<%= link_to "Create a new list", new_list_path %>
-<% @lists.each do |list| %>
-    <%= link_to  list_path(list) do %>
-      <div>
-        <p><%= list.name %></p>
+<div class="container">
+  <div class = "lists">
+    <% @lists.each do |list| %>
+      <div class= "list">
+        <%= link_to  list_path(list) do %>
+            <img src= "https://api.lorem.space/image/movie?" alt="list" class = "list-image">
+            <div class = "list-bottom">
+              <p id = "list-name"><%= list.name %></p>
+              <p><%= list.movies.count %> Movies</p>
+            </div>
+        <% end %>
       </div>
     <% end %>
-<% end %>
+  </div>
+</div>
+<%= link_to "Create a new list", new_list_path %>
